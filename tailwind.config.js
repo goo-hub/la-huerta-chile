@@ -16,6 +16,9 @@ module.exports = {
         Inter: ['Inter', 'sans-serif'],
         Season: ['Season', 'sans-serif'],
       },
+      screens: {
+        '2k': '2000px',
+      },
     },
   },
   plugins: [],
