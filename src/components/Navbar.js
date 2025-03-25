@@ -1,21 +1,27 @@
-import React from "react";
-
-const logo = require('../assets/logo.png')
+import React, { useState } from "react";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-        <nav className="fixed top-0  py-8 w-full bg-black/20 backdrop-blur-md shadow-md z-50">
-            <div className="container mx-auto flex justify-between items-center ">
-                <img src={logo} alt="logo la huerta chile" width={300} />
-                <ul className="flex font-Inter font-extralight space-x-6 text-white">
-                    <li><a href="#hero" className="hover:text-accent">Inicio</a></li>
-                    <li><a href="#servicios" className="hover:text-accent">Servicios</a></li>
-                    <li><a href="#contacto" className="hover:text-accent">Contacto</a></li>
+        <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-lg shadow-md z-50">
+            <div className="container mx-auto flex justify-between items-center px-6 py-4 lg:py-6">
+
+                {/* Logo */}
+                <img src={logo} alt="La Huerta Chile" className="w-40 sm:w-48 md:w-56 lg:w-72 h-auto" />
+
+                {/* Menú Desktop */}
+                <ul className="hidden md:flex font-Inter font-light space-x-6 text-white">
+                    <li><a href="#hero" className="hover:text-accent transition">Inicio</a></li>
+                    <li><a href="#servicios" className="hover:text-accent transition">Servicios</a></li>
+                    <li><a href="#contacto" className="hover:text-accent transition">Contacto</a></li>
                 </ul>
 
+                {/* Botón Hablemos */}
                 <button
                     type="submit"
-                    className="flex justify-center gap-4 items-center shadow-xl text-lg font-Inter text-white bg-transparent backdrop-blur-md isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-primary hover:text-gray-900 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 pl-6 pr-2 py-2 overflow-hidden border-2 rounded-full group"
+                    className="hidden md:flex justify-center gap-4 items-center shadow-xl text-lg font-Inter text-white bg-transparent backdrop-blur-md isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-primary hover:text-gray-900 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 pl-6 pr-2 py-2 overflow-hidden border-2 rounded-full group"
                 >
                     Hablemos
                     <svg
@@ -30,7 +36,25 @@ const Navbar = () => {
                     </svg>
                 </button>
 
+                {/* Botón Hamburguesa Mobile */}
+                <button
+                    className="md:hidden text-white text-3xl"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    ☰
+                </button>
+
             </div>
+
+            {/* Menú Mobile */}
+            {menuOpen && (
+                <div className="md:hidden bg-black/90 text-white fixed top-0 left-0 w-full h-screen flex flex-col items-center justify-center space-y-6 text-xl">
+                    <button onClick={() => setMenuOpen(false)} className="absolute top-5 right-6 text-3xl">✖</button>
+                    <a href="#hero" className="hover:text-accent transition">Inicio</a>
+                    <a href="#servicios" className="hover:text-accent transition">Servicios</a>
+                    <a href="#contacto" className="hover:text-accent transition">Contacto</a>
+                </div>
+            )}
         </nav>
     );
 };

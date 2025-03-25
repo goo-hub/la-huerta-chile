@@ -43,7 +43,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section id="hero" ref={heroRef} className="relative w-full z-0 h-screen flex items-center justify-center">
+        <section id="hero" ref={heroRef} className="relative w-full z-0 h-screen flex items-center justify-center ">
             {/* Video de fondo */}
             {/* <video
                 className="absolute top-0 left-0 w-full h-full object-cover"
@@ -54,10 +54,10 @@ const Hero = () => {
             /> */}
 
             {/* Contenido principal */}
-            <div className="relative h-full z-10 flex flex-col md:flex-row items-center text-white w-4/5">
+            <div className="container mx-auto px-5 2xl:px-0 relative h-auto lg:h-full z-10 flex flex-col gap-8 md:gap-0 md:flex-row items-center text-white">
                 {/* Columna izquierda */}
-                <div className="hero-title w-7/12 h-full flex flex-col justify-center items-stretch text-center md:text-left gap-8">
-                    <h1 className=" font-Season text-4xl -mt-24 md:text-6xl font-bold">
+                <div className="hero-title w-full lg:w-8/12 2xl:w-7/12 h-full flex flex-col justify-center items-center md:items-stretch text-center md:text-left gap-2 md:gap-8">
+                    <h1 className="font-Season text-4xl -mt-24 md:text-6xl font-bold">
                         Soluciones en riego<br />agrícola y agrotextiles
                     </h1>
 
@@ -70,14 +70,14 @@ const Hero = () => {
                         <FaSun />
                         <FaTree />
                     </div>
-                    <div className="w-auto absolute -left-16 bottom-60 flex items-center justify-start gap-2 rotate-[270deg]">
+                    <div className="w-auto absolute -left-16 bottom-40 2xl:bottom-60 hidden lg:flex items-center justify-start gap-2 rotate-[270deg]">
                         <img src={arrowDown} alt="arrow down" />
                         <span className="text-sm font-light">Scroll down</span>
                     </div>
                 </div>
 
                 {/* Columna derecha con botón alineado abajo */}
-                <div className="w-5/12 h-full py-48 flex flex-col justify-end items-start ">
+                <div className="w-full lg:w-4/12 2xl:w-5/12 h-auto md:h-full pb-0 md:pb-48 flex flex-col justify-center md:justify-end items-center md:items-start ">
                     <button
                         type="submit"
                         className="hero-btn flex justify-center gap-4 items-center shadow-xl text-lg font-Inter font-semibold text-black bg-white backdrop-blur-md isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-primary hover:text-gray-900 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 pl-6 pr-2 py-2 overflow-hidden border-2 rounded-full group"
@@ -99,7 +99,7 @@ const Hero = () => {
 
 
             {/* Botones flotantes */}
-            <div className="absolute bottom-20 flex gap-4 font-Inter z-40">
+            <div className="absolute bottom-20 hidden lg:flex gap-4 font-Inter z-40">
                 {["Riego agrícola", "Agrotextil", "Herramientas", "Jardinería", "Piscina", "Fitting"].map(
                     (text, index) => (
                         <button

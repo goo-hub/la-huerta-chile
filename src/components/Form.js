@@ -47,11 +47,11 @@ const ContactForm = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white px-6 md:px-8 pt-20 pb-12 relative rounded-[40px] shadow-lg max-w-lg mx-auto"
+            className="bg-white w-full px-5 md:px-8 pt-12 lg:pt-20 pb-12 relative rounded-none lg:rounded-[40px] shadow-lg mx-auto"
         >
             {/* Icono de WhatsApp */}
             <Link to={'https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target='_blank'>
-                <FaWhatsapp className="text-white bg-primary hover:bg-accent hover:text-primary transition-colors duration-1000 ease-in-out absolute text-5xl -top-10 left-[38%] border-8 border-white rounded-full p-2 box-content" />
+                <FaWhatsapp className="hidden lg:block text-white bg-primary hover:bg-accent hover:text-primary transition-colors duration-1000 ease-in-out absolute text-5xl -top-10 left-[38%] border-8 border-white rounded-full p-2 box-content" />
             </Link>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
