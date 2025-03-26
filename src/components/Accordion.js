@@ -41,7 +41,7 @@ export default function Accordion() {
                             backgroundPosition: "center",
                         }}
                     >
-                        <img src={service.icon} alt={service.title2} className={`w-20 ${activeIndex === index ? "invert" : "invert-0"}`} />
+                        <img src={service.icon} alt={service.title2} className={`h-20 ${activeIndex === index ? "invert" : "invert-0"}`} />
 
                         <div className={`w-48 flex flex-col ${activeIndex === index ? "rotate-0" : "rotate-[-90deg] -translate-y-16"}`}>
                             <motion.h2 className={`text-left font-bold transition-transform ${activeIndex === index ? "w-full text-4xl text-white" : "text-3xl text-black"
@@ -103,7 +103,7 @@ export default function Accordion() {
                         }}
                     >
                         <div className="flex items-center w-full">
-                            <img src={service.icon} alt={service.title2} className={`w-12 mr-4 ${activeIndex === index ? "invert" : "invert-0"}`} />
+                            <img src={service.icon} alt={service.title2} className={`h-12 mr-4 ${activeIndex === index ? "invert" : "invert-0"}`} />
 
                             <div className="flex-1">
                                 <h2 className={`font-bold ${activeIndex === index ? "text-white text-3xl" : "text-black"}`}>
