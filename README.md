@@ -1,68 +1,78 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🌱 La Huerta | Soluciones en Riego Agrícola
 
-## Available Scripts
+Bienvenido a **La Huerta**, la plataforma líder en insumos de riego agrícola y agrotextiles en Chile. Nuestro sitio web está diseñado para ofrecer una experiencia interactiva, optimizada y responsiva, garantizando información clara y accesible para nuestros clientes. 🚜💧
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Tecnologías Utilizadas
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este proyecto está desarrollado con las mejores herramientas para una experiencia rápida y fluida:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **Next.js** ⚡️ - Framework de React para aplicaciones web optimizadas
+- **Tailwind CSS** 🎨 - Para un diseño moderno y responsivo
+- **GSAP** 🎬 - Animaciones fluidas y atractivas
+- **Framer Motion** 💡 - Efectos de transición suaves y modernos
+- **Matter.js** 🏗 - Simulaciones físicas interactivas
+- **React Icons** 🔗 - Iconografía intuitiva
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🌎 Características Clave
 
-### `npm run build`
+✅ **Diseño Interactivo y Responsivo** 📱💻  
+✅ **Animaciones Dinámicas** con GSAP y Framer Motion 🌀  
+✅ **Optimizado para SEO** para mejorar la visibilidad en buscadores 🔍  
+✅ **Carga de Imágenes Optimizada** con Cloudinary 📸  
+✅ **Integración con EmailJS** para contacto rápido 📩  
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## 📜 Instalación y Configuración
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
-### `npm run eject`
+1. **Clonar el repositorio**
+   ```sh
+   git clone https://github.com/tu-usuario/la-huerta.git
+   cd la-huerta
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. **Instalar dependencias**
+   ```sh
+   npm install
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Ejecutar el servidor en desarrollo**
+   ```sh
+   npm run dev
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. **Abrir en el navegador**
+   ```
+   http://localhost:3000
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## 📌 Contribuciones
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+¡Nos encanta la colaboración! Si deseas contribuir con mejoras o nuevas funcionalidades:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Haz un **fork** del repositorio 🍴
+2. Crea una nueva rama `feature/nueva-funcionalidad` 🌿
+3. Realiza tus cambios y haz un **commit** 🛠
+4. Envía un **Pull Request** 🚀
 
-### Code Splitting
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## 🌾 Equipo y Contacto
 
-### Analyzing the Bundle Size
+📍 **La Huerta Chile**  
+📧 contacto@lahuertachile.com  
+🌐 [Sitio Web](https://lahuertachile.com)  
+📲 [WhatsApp](https://web.whatsapp.com/send?phone=56966189492)  
+📸 [Instagram](https://www.instagram.com/lahuerta_riegoagricola/)  
+👍 [Facebook](https://www.facebook.com/profile.php?id=100094564267728)  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+🌿 ¡Gracias por visitarnos y ayudarnos a revolucionar el riego agrícola! 🌎💧
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
