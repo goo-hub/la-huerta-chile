@@ -8,11 +8,10 @@ Bienvenido a **La Huerta**, la plataforma líder en insumos de riego agrícola y
 
 Este proyecto está desarrollado con las mejores herramientas para una experiencia rápida y fluida:
 
-- **Next.js** ⚡️ - Framework de React para aplicaciones web optimizadas
+- **ReactJS** ⚡️ - Librería de Javascript para aplicaciones web optimizadas
 - **Tailwind CSS** 🎨 - Para un diseño moderno y responsivo
 - **GSAP** 🎬 - Animaciones fluidas y atractivas
 - **Framer Motion** 💡 - Efectos de transición suaves y modernos
-- **Matter.js** 🏗 - Simulaciones físicas interactivas
 - **React Icons** 🔗 - Iconografía intuitiva
 
 ---
@@ -44,7 +43,7 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 3. **Ejecutar el servidor en desarrollo**
    ```sh
-   npm run dev
+   npm start
    ```
 
 4. **Abrir en el navegador**
@@ -69,7 +68,7 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 📍 **La Huerta Chile**  
 📧 contacto@lahuertachile.com  
-🌐 [Sitio Web](https://lahuertachile.com)  
+🌐 [Sitio Web](https://lahuertachile.cl)  
 📲 [WhatsApp](https://web.whatsapp.com/send?phone=56966189492)  
 📸 [Instagram](https://www.instagram.com/lahuerta_riegoagricola/)  
 👍 [Facebook](https://www.facebook.com/profile.php?id=100094564267728)  
