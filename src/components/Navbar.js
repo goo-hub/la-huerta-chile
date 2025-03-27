@@ -10,7 +10,9 @@ const Navbar = () => {
             <div className="container mx-auto flex justify-between items-center px-6 py-4 lg:py-6">
 
                 {/* Logo */}
-                <img src={logo} alt="La Huerta Chile" className="w-40 sm:w-48 md:w-56 lg:w-72 h-auto" />
+                <Link to={'https://lahuertachile.cl'} >
+                    <img src={logo} alt="La Huerta Chile" className="w-40 sm:w-48 md:w-56 lg:w-72 h-auto" />
+                </Link>
 
                 {/* Menú Desktop */}
                 <ul className="hidden md:flex font-Inter font-light space-x-6 text-white">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const accordion1 = require('../assets/accordion-1.png');
@@ -19,7 +19,19 @@ const services = [
 ];
 
 export default function Accordion() {
-    const [activeIndex, setActiveIndex] = useState(0);
+    // Estado inicial basado en sessionStorage o 0 por defecto
+    const [activeIndex, setActiveIndex] = useState(() => {
+        // Verificamos si hay un índice almacenado en sessionStorage
+        const storedIndex = sessionStorage.getItem('selectedServiceIndex');
+        return storedIndex ? parseInt(storedIndex) : 0;
+    });
+
+    // Efecto para limpiar el sessionStorage cuando el componente se desmonta
+    useEffect(() => {
+        return () => {
+            sessionStorage.removeItem('selectedServiceIndex');
+        };
+    }, []);
 
     return (
         <div className="w-full px-5 2xl:px-0">
@@ -41,7 +53,7 @@ export default function Accordion() {
                             backgroundPosition: "center",
                         }}
                     >
-                        <img src={service.icon} alt={service.title2} className={`h-20 ${activeIndex === index ? "invert" : "invert-0"}`} />
+                        <img src={service.icon} alt={service.title2} className={`max-h-16 2xl:max-h-20 object-contain ${activeIndex === index ? "invert" : "invert-0"}`} />
 
                         <div className={`w-48 flex flex-col ${activeIndex === index ? "rotate-0" : "rotate-[-90deg] -translate-y-16"}`}>
                             <motion.h2 className={`text-left font-bold transition-transform ${activeIndex === index ? "w-full text-4xl text-white" : "text-3xl text-black"

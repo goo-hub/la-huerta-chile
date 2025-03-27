@@ -47,7 +47,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white w-full px-5 md:px-8 pt-12 lg:pt-20 pb-12 relative rounded-none lg:rounded-[40px] shadow-lg mx-auto"
+            className="bg-white w-full px-5 md:px-8 pt-12 2xl:pt-20 pb-8 relative rounded-none lg:rounded-[40px] shadow-lg mx-auto"
         >
             {/* Icono de WhatsApp */}
             <Link to={'https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target='_blank'>
