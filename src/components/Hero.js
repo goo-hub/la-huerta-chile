@@ -13,6 +13,8 @@ const herramientas = require("../assets/herramientas.png");
 const jardineria = require("../assets/jardineria.png");
 const piscina = require("../assets/piscina.png");
 const electricidad = require("../assets/electricidad.png");
+const heroBg = require('../assets/hero_bg.mp4')
+const heroImg = require('../assets/hero-bg.png')
 
 const Hero = () => {
 
@@ -22,7 +24,7 @@ const Hero = () => {
 
     useEffect(() => {
         const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.out" } });
-
+        document.querySelector('video').playbackRate = 0.5;
         tl.fromTo(heroRef.current, { opacity: 0 }, { opacity: 1 })
             .fromTo(".hero-title", { y: 50, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.5")
             .fromTo(".hero-icons", { opacity: 0, y: 20 }, { opacity: 1, y: 0, stagger: 0.2 }, "-=0.3")
@@ -46,13 +48,15 @@ const Hero = () => {
     return (
         <section id="hero" ref={heroRef} className="relative w-full z-0 h-screen flex items-center justify-center ">
             {/* Video de fondo */}
-            {/* <video
+            <video
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                src="/videos/agriculture.mp4"
+                src={heroBg}
                 autoPlay
-                loop
                 muted
-            /> */}
+                poster={heroImg}
+            />
+            <div className="w-full h-screen absolute bg-black/50">
+            </div>
 
             {/* Contenido principal */}
             <div className="container mx-auto px-5 2xl:px-0 relative h-auto lg:h-full z-10 flex flex-col gap-8 md:gap-0 md:flex-row items-center text-white">
