@@ -55,7 +55,7 @@ const Hero = () => {
                 muted
                 poster={heroImg}
             />
-            <div className="w-full h-screen absolute bg-black/50">
+            <div className="w-full h-screen absolute bg-gradient-to-r from-black/80 via-black/60 to-black/10">
             </div>
 
             {/* Contenido principal */}

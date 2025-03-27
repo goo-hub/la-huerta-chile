@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className="flex flex-col bg-[#161616]">
-      <footer className="bg-[#161616] text-white py-24">
+    <div className="flex flex-col bg-[#161616] z-40">
+      <footer className="bg-[#161616] text-white py-24 z-40">
         <div className="container mx-auto flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center md:items-stretch gap-12 px-6">
           {/* Sección izquierda */}
           <div className="w-full md:w-1/2 flex flex-col gap-4 text-center md:text-left items-center md:items-start">
@@ -70,7 +70,7 @@ const Footer = () => {
       </footer>
 
       {/* Copyright */}
-      <div className="py-6 text-sm bg-[#161616] text-[#8C8C8C] text-center border-t border-neutral-600">
+      <div className="py-6 text-sm bg-[#161616] text-[#8C8C8C] text-center border-t border-neutral-600 z-40">
         <p>&copy; {new Date().getFullYear()} La Huerta | Soluciones en Riegos Agrícolas</p>
       </div>
     </div>

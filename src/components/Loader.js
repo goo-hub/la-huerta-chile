@@ -4,7 +4,7 @@ const Loader = () => {
     return (
         <>
             <div className="w-screen animated-background h-screen flex flex-col justify-center items-center bg-gradient-to-l from-primary via-lime-200 to-accent" >
-                <div class="spinner">
+                <div className="spinner">
                     <div></div>
                     <div></div>
                     <div></div>
