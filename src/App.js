@@ -6,6 +6,7 @@ import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
 import Whatsapp from "./components/Whatsapp";
 import Loader from "./components/Loader";
+import Goo from './components/Goo';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,13 +24,14 @@ function App() {
   return (
     <>
 
-      <div className=" bg-gray-800 text-gray-900">
+      <div className="bg-gray-800 text-gray-900">
         <Navbar />
         <Hero />
         <Servicios />
         <Contacto />
         <Footer />
         <Whatsapp />
+        <Goo />
       </div>
     </>
   );

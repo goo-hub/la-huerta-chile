@@ -24,16 +24,22 @@ const services = [
 ];
 
 export default function Accordion() {
-    // Estado inicial basado en sessionStorage o 0 por defecto
     const [activeIndex, setActiveIndex] = useState(() => {
-        // Verificamos si hay un índice almacenado en sessionStorage
         const storedIndex = sessionStorage.getItem('selectedServiceIndex');
         return storedIndex ? parseInt(storedIndex) : 0;
     });
 
-    // Efecto para limpiar el sessionStorage cuando el componente se desmonta
     useEffect(() => {
+        const handleServiceSelected = (event) => {
+            const index = event.detail;
+            setActiveIndex(index);
+            sessionStorage.setItem('selectedServiceIndex', index);
+        };
+
+        window.addEventListener('serviceSelected', handleServiceSelected);
+
         return () => {
+            window.removeEventListener('serviceSelected', handleServiceSelected);
             sessionStorage.removeItem('selectedServiceIndex');
         };
     }, []);
@@ -41,7 +47,7 @@ export default function Accordion() {
     return (
         <div className="w-full px-5 2xl:px-0">
             {/* Versión Desktop (horizontal) */}
-            <div className="hidden md:flex gap-4 items-center justify-between container mx-auto h-[700px] bg-gray-100 p-24 rounded-[60px]">
+            <div className="hidden lg:flex gap-4 items-center justify-between container mx-auto h-[700px] bg-gray-100 p-12 xl:p-16 2xl:p-24 rounded-[60px]">
                 {services.map((service, index) => (
                     <motion.div
                         key={`desktop-${index}`}
@@ -61,11 +67,11 @@ export default function Accordion() {
                         <img src={service.icon} alt={service.title2} className={`max-h-16 2xl:max-h-20 object-contain ${activeIndex === index ? "invert" : "invert-0"}`} />
 
                         <div className={`flex flex-col ${activeIndex === index ? "w-full rotate-0" : "w-60 rotate-[-90deg] -translate-y-16"}`}>
-                            <motion.h2 className={`text-left font-bold transition-transform ${activeIndex === index ? "w-full text-4xl text-white" : "text-3xl text-black"
+                            <motion.h2 className={`text-left font-bold transition-transform ${activeIndex === index ? "w-full text-3xl 2xl:text-4xl text-white" : "text-3xl text-black"
                                 }`}>
                                 {service.title1}
                             </motion.h2>
-                            <motion.h2 className={`text-left font-bold transition-transform ${activeIndex === index ? "w-full text-4xl text-white" : "text-3xl text-black"
+                            <motion.h2 className={`text-left font-bold transition-transform ${activeIndex === index ? "w-full text-3xl 2xl:text-4xl text-white" : "text-3xl text-black"
                                 }`}>
                                 {service.title2}
                             </motion.h2>
@@ -104,12 +110,12 @@ export default function Accordion() {
             </div>
 
             {/* Versión Mobile (vertical) */}
-            <div className="md:hidden container mx-auto bg-gray-100 p-6 rounded-[30px]">
+            <div className="lg:hidden container mx-auto bg-gray-100 p-6 rounded-[30px]">
                 {services.map((service, index) => (
                     <motion.div
                         key={`mobile-${index}`}
                         className={`relative overflow-hidden flex flex-col cursor-pointer rounded-2xl shadow-lg transition-all duration-300 mb-4 ${activeIndex === index
-                            ? "h-auto p-6 border-none items-start justify-around"
+                            ? "h-auto py-12 px-6 border-none items-start justify-around"
                             : "h-24 bg-white border border-gray-200 hover:bg-accent px-4 py-4 items-center justify-center"
                             }`}
                         onClick={() => setActiveIndex(index === activeIndex ? -1 : index)}

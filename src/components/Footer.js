@@ -15,7 +15,7 @@ const Footer = () => {
             <p className="mb-4 text-[#8C8C8C]">
               No solo optimizamos el riego, lo llevamos al siguiente nivel.
             </p>
-            <Link to={'https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target="_blank" >
+            <Link to={'https://web.whatsapp.com/send?phone=56942698476&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target="_blank" >
               <button
                 type="submit"
                 className="mt-4 md:mt-8 flex justify-center gap-4 items-center shadow-xl text-lg font-Inter text-black bg-accent backdrop-blur-md isolation-auto border-gray-50 
@@ -61,7 +61,7 @@ const Footer = () => {
               <Link to="https://www.instagram.com/lahuerta_riegoagricola/" target="_blank">
                 <FaInstagram className="text-gray-400 hover:text-accent" />
               </Link>
-              <Link to="https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n" target="_blank">
+              <Link to={'https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target='_blank'>
                 <FaWhatsapp className="text-gray-400 hover:text-accent" />
               </Link>
             </div>

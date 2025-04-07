@@ -15,6 +15,7 @@ const Servicios = () => {
           <p>Optimizamos cada gota y protegemos cada cosecha. Ofrecemos insumos de riego agrícola y agrotextiles de alto rendimiento, garantizando eficiencia, durabilidad y resultados superiores. ¡Lleva tu producción al siguiente nivel con nosotros!</p>
         </div>
       </div>
+      
       <Accordion />
     </section>
   );

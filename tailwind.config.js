@@ -20,7 +20,7 @@ module.exports = {
         '2k': '2000px',
       },
       animation: {
-        'loop-scroll': 'loop-scroll 60s linear infinite',
+        'loop-scroll': 'loop-scroll 40s linear infinite',
       },
       keyframes: {
         'loop-scroll': {
