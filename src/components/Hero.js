@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaLeaf, FaSeedling, FaWater, FaTractor, FaSun, FaTree, } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Marquee from "./Marquesina";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,8 +66,10 @@ const Hero = () => {
                     <h1 className="font-Season text-4xl -mt-24 md:text-6xl font-bold">
                         Soluciones en riego<br />agrícola y agrotextiles
                     </h1>
-
-                    {/* Íconos */}
+                    <div className="w-full lg:w-8/12">
+                        <Marquee />
+                    </div>
+                    {/* Íconos 
                     <div className="hero-icons flex gap-4 mt-4 text-4xl justify-center md:justify-start">
                         <FaLeaf />
                         <FaSeedling />
@@ -74,7 +77,7 @@ const Hero = () => {
                         <FaTractor />
                         <FaSun />
                         <FaTree />
-                    </div>
+                    </div>*/}
                     <div className="w-auto absolute -left-16 bottom-40 2xl:bottom-60 hidden lg:flex items-center justify-start gap-2 rotate-[270deg]">
                         <img src={arrowDown} alt="arrow down" />
                         <span className="text-sm font-light">Scroll down</span>
@@ -83,7 +86,7 @@ const Hero = () => {
 
                 {/* Columna derecha con botón alineado abajo */}
                 <div className="w-full lg:w-4/12 2xl:w-5/12 h-auto md:h-full pb-0 md:pb-48 flex flex-col justify-center md:justify-end items-center md:items-start ">
-                    <Link to={'https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target="_blank">
+                    <Link to={'https://web.whatsapp.com/send?phone=56942698476&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target="_blank">
                         <button
                             type="submit"
                             className="hero-btn flex justify-center gap-4 items-center shadow-xl text-lg font-Inter font-semibold text-black bg-white backdrop-blur-md isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-primary hover:text-gray-900 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 pl-6 pr-2 py-2 overflow-hidden border-2 rounded-full group"

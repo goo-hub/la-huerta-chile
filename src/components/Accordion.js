@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const accordion1 = require('../assets/accordion-1.png');
+const accordion2 = require('../assets/accordion-2.png');
+const accordion3 = require('../assets/accordion-3.png');
+const accordion4 = require('../assets/accordion-4.png');
+const accordion5 = require('../assets/accordion-5.png');
+const accordion6 = require('../assets/accordion-6.png');
 const accordionIcon1 = require('../assets/accordion-i-1.png');
 const accordionIcon2 = require('../assets/accordion-i-2.png');
 const accordionIcon3 = require('../assets/accordion-i-3.png');
@@ -10,12 +15,12 @@ const accordionIcon5 = require('../assets/accordion-i-5.png');
 const accordionIcon6 = require('../assets/accordion-i-6.png');
 
 const services = [
-    { title1: "Insumos:", title2: "Riego agrícola", bgImg: accordion1, icon: accordionIcon1, content: "Optimizamos el riego con precisión milimétrica. Cada insumo que ofrecemos está diseñado para maximizar la eficiencia hídrica y mejorar el rendimiento de tus cultivos." },
-    { title1: "Insumos:", title2: "Agrotextiles", bgImg: accordion1, icon: accordionIcon2, content: "Protección efectiva para cultivos y suelos..." },
-    { title1: "Insumos:", title2: "Piscinas", bgImg: accordion1, icon: accordionIcon3, content: "Soluciones de calidad para mantenimiento de piscinas..." },
-    { title1: "Insumos:", title2: "Jardinería", bgImg: accordion1, icon: accordionIcon4, content: "Todo lo necesario para el cuidado de jardines..." },
-    { title1: "Insumos:", title2: "Electricidad", bgImg: accordion1, icon: accordionIcon5, content: "Equipos eléctricos para instalaciones agrícolas..." },
-    { title1: "Insumos:", title2: "Herramientas", bgImg: accordion1, icon: accordionIcon6, content: "Herramientas especializadas para trabajo en campo..." },
+    { title1: "Insumos:", title2: "De riego agrícola", bgImg: accordion1, icon: accordionIcon1, content: "Optimizamos el riego con precisión milimétrica. Cada insumo que ofrecemos está diseñado para maximizar la eficiencia hídrica y mejorar el rendimiento de tus cultivos." },
+    { title1: "Insumos:", title2: "De agrotextiles", bgImg: accordion2, icon: accordionIcon2, content: "Optimizamos el riego con precisión milimétrica. Cada insumo que ofrecemos está diseñado para proteger y potenciar tus cultivos ante cualquier condición climática." },
+    { title1: "Insumos:", title2: "De piscinas", bgImg: accordion3, icon: accordionIcon3, content: "Optimizamos el cuidado de tu piscina con precisión total. Cada producto y servicio está diseñado para mantener el agua limpia y lista para que la disfrutes al máximo." },
+    { title1: "Insumos:", title2: "De jardinería", bgImg: accordion4, icon: accordionIcon4, content: "Optimizamos el cuidado de tus espacios verdes con precisión natural. Cada producto está pensado para mantener tus plantas exuberantes y tus jardines siempre hermosos." },
+    { title1: "Insumos:", title2: "De electricidad", bgImg: accordion5, icon: accordionIcon5, content: "Optimizamos tus sistemas eléctricos con precisión y seguridad. Cada instalación y mantenimiento está diseñado para brindar eficiencia, confiabilidad y tranquilidad total." },
+    { title1: "Insumos:", title2: "De herramientas", bgImg: accordion6, icon: accordionIcon6, content: "Optimizamos tus labores del campo con precisión y resistencia. Cada herramienta está diseñada para aumentar tu productividad y facilitar el trabajo agrícola día a día." },
 ];
 
 export default function Accordion() {
@@ -55,7 +60,7 @@ export default function Accordion() {
                     >
                         <img src={service.icon} alt={service.title2} className={`max-h-16 2xl:max-h-20 object-contain ${activeIndex === index ? "invert" : "invert-0"}`} />
 
-                        <div className={`w-48 flex flex-col ${activeIndex === index ? "rotate-0" : "rotate-[-90deg] -translate-y-16"}`}>
+                        <div className={`flex flex-col ${activeIndex === index ? "w-full rotate-0" : "w-60 rotate-[-90deg] -translate-y-16"}`}>
                             <motion.h2 className={`text-left font-bold transition-transform ${activeIndex === index ? "w-full text-4xl text-white" : "text-3xl text-black"
                                 }`}>
                                 {service.title1}

@@ -6,7 +6,7 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-lg shadow-md z-50">
+        <nav className="fixed top-0 w-full bg-primary/20 backdrop-blur-lg shadow-md z-50">
             <div className="container mx-auto flex justify-between items-center px-6 py-4 lg:py-6">
 
                 {/* Logo */}
@@ -22,7 +22,7 @@ const Navbar = () => {
                 </ul>
 
                 {/* Botón Hablemos */}
-                <Link to={'https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target="_blank" >
+                <Link to={'https://web.whatsapp.com/send?phone=56942698476&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target="_blank" >
                     <button
                         type="submit"
                         className="hidden md:flex justify-center gap-4 items-center shadow-xl text-lg font-Inter text-white bg-transparent backdrop-blur-md isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-primary hover:text-gray-900 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 pl-6 pr-2 py-2 overflow-hidden border-2 rounded-full group"
