@@ -18,6 +18,7 @@ const Navbar = () => {
                 <ul className="hidden md:flex font-Inter font-light space-x-6 text-white">
                     <li><a href="#hero" className="hover:text-accent transition">Inicio</a></li>
                     <li><a href="#servicios" className="hover:text-accent transition">Servicios</a></li>
+                    <li><a href="#nosotros" className="hover:text-accent transition">Nosotros</a></li>
                     <li><a href="#contacto" className="hover:text-accent transition">Contacto</a></li>
                 </ul>
 
@@ -56,6 +57,7 @@ const Navbar = () => {
                     <button onClick={() => setMenuOpen(false)} className="absolute top-5 right-6 text-3xl">✖</button>
                     <a href="#hero" className="hover:text-accent transition">Inicio</a>
                     <a href="#servicios" className="hover:text-accent transition">Servicios</a>
+                    <a href="#nosotros" className="hover:text-accent transition">Nosotros</a>
                     <a href="#contacto" className="hover:text-accent transition">Contacto</a>
                 </div>
             )}

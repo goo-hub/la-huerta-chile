@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Whatsapp from "./components/Whatsapp";
 import Loader from "./components/Loader";
 import Goo from './components/Goo';
+import Nosotros from './components/Nosotros';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,7 @@ function App() {
         <Navbar />
         <Hero />
         <Servicios />
+        <Nosotros />
         <Contacto />
         <Footer />
         <Whatsapp />
