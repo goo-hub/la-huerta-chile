@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "autoprefixer": "^10.4.21",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.5.0",
     "gsap": "^3.12.7",
     "react": "^19.0.0",

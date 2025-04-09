@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -15,15 +15,25 @@ const ContactForm = () => {
     });
 
     const [errors, setErrors] = useState({});
+    const [successMessage, setSuccessMessage] = useState("");
+    const [alert, setAlert] = useState({ message: "", type: "" });
 
-    // Manejo de cambios en los inputs
+    useEffect(() => {
+        if (alert.message) {
+            const timer = setTimeout(() => {
+                setAlert({ message: "", type: "" });
+            }, 2000);
+            return () => clearTimeout(timer);
+        }
+    }, [alert]);
+
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
         setErrors({ ...errors, [name]: "" });
+        setSuccessMessage("");
     };
 
-    // Validación y envío del formulario
     const handleSubmit = (e) => {
         e.preventDefault();
         let newErrors = {};
@@ -39,7 +49,32 @@ const ContactForm = () => {
             return;
         }
 
-        console.log("Formulario enviado:", formData);
+        const templateParams = {
+            name: formData.name,
+            lastName: formData.lastName,
+            email: formData.email,
+            message: formData.message,
+        };
+
+        emailjs.send(
+            "service_6nue1ak",
+            "template_512vuln",
+            templateParams,
+            "7N5wU9YQn41teEjyT"
+        ).then((response) => {
+            setSuccessMessage("Tu mensaje fue enviado correctamente.");
+            setAlert({ message: "Mensaje enviado correctamente 🎉", type: "success" });
+            setFormData({
+                name: "",
+                lastName: "",
+                email: "",
+                message: "",
+                termsAccepted: false,
+            });
+        }).catch((err) => {
+            console.error("FAILED...", err);
+            setAlert({ message: "⚠️ Algo anda mal. Inténtalo de nuevo.", type: "error" });
+        });
     };
 
     return (
@@ -49,13 +84,33 @@ const ContactForm = () => {
             transition={{ duration: 0.5 }}
             className="bg-white w-full px-5 md:px-8 pt-12 2xl:pt-20 pb-8 relative rounded-none lg:rounded-[40px] shadow-lg mx-auto"
         >
-            {/* Icono de WhatsApp */}
-            <Link to={'https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target='_blank'>
-                <FaWhatsapp className="hidden lg:block text-white bg-primary hover:bg-accent hover:text-primary transition-colors duration-1000 ease-in-out absolute text-5xl -top-10 left-[38%] border-8 border-white rounded-full p-2 box-content" />
-            </Link>
+            {/* Alert Notification */}
+            <AnimatePresence>
+                {alert.message && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        className={`fixed top-32 right-[40%] transform -translate-x-1/2 px-6 py-3 rounded-xl shadow-lg z-[999999] text-white font-semibold ${alert.type === "success" ? "bg-green-600" : "bg-red-500"
+                            }`}
+                    >
+                        {alert.message}
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
+            {/* WhatsApp Icon */}
+            <a
+                href="https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <FaWhatsapp className="hidden lg:block text-white bg-primary hover:bg-accent hover:text-primary transition-colors duration-1000 ease-in-out absolute text-5xl -top-10 left-[38%] border-8 border-white rounded-full p-2 box-content" />
+            </a>
+
+            {/* Formulario */}
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                {/* Campo Nombre */}
+                {/* Nombre */}
                 <div className="flex flex-col">
                     <label className="text-gray-700 font-medium">Nombre *</label>
                     <input
@@ -63,13 +118,12 @@ const ContactForm = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className={`w-full p-3 border rounded-full focus:outline-none transition ${errors.name ? "border-red-500" : "border-gray-300 focus:border-green-500"
-                            }`}
+                        className={`w-full p-3 border rounded-full focus:outline-none transition ${errors.name ? "border-red-500" : "border-gray-300 focus:border-green-500"}`}
                     />
                     {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                 </div>
 
-                {/* Campo Apellido */}
+                {/* Apellido */}
                 <div className="flex flex-col">
                     <label className="text-gray-700 font-medium">Apellido *</label>
                     <input
@@ -77,13 +131,12 @@ const ContactForm = () => {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
-                        className={`w-full p-3 border rounded-full focus:outline-none transition ${errors.lastName ? "border-red-500" : "border-gray-300 focus:border-green-500"
-                            }`}
+                        className={`w-full p-3 border rounded-full focus:outline-none transition ${errors.lastName ? "border-red-500" : "border-gray-300 focus:border-green-500"}`}
                     />
                     {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
                 </div>
 
-                {/* Campo Email */}
+                {/* Email */}
                 <div className="flex flex-col">
                     <label className="text-gray-700 font-medium">Correo Electrónico *</label>
                     <input
@@ -91,13 +144,12 @@ const ContactForm = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full p-3 border rounded-full focus:outline-none transition ${errors.email ? "border-red-500" : "border-gray-300 focus:border-green-500"
-                            }`}
+                        className={`w-full p-3 border rounded-full focus:outline-none transition ${errors.email ? "border-red-500" : "border-gray-300 focus:border-green-500"}`}
                     />
                     {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                 </div>
 
-                {/* Campo Mensaje */}
+                {/* Mensaje */}
                 <div className="flex flex-col">
                     <label className="text-gray-700 font-medium">Mensaje *</label>
                     <textarea
@@ -105,13 +157,12 @@ const ContactForm = () => {
                         rows="4"
                         value={formData.message}
                         onChange={handleChange}
-                        className={`w-full p-3 border rounded-2xl focus:outline-none transition ${errors.message ? "border-red-500" : "border-gray-300 focus:border-green-500"
-                            }`}
+                        className={`w-full p-3 border rounded-2xl focus:outline-none transition ${errors.message ? "border-red-500" : "border-gray-300 focus:border-green-500"}`}
                     />
                     {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                 </div>
 
-                {/* Checkbox de Términos y Condiciones */}
+                {/* Checkbox Términos */}
                 <div className="flex items-center gap-2">
                     <input
                         type="checkbox"
@@ -126,7 +177,12 @@ const ContactForm = () => {
                 </div>
                 {errors.termsAccepted && <p className="text-red-500 text-sm">{errors.termsAccepted}</p>}
 
-                {/* Botón Enviar */}
+                {/* Mensaje éxito */}
+                {successMessage && (
+                    <p className="text-center font-semibold text-green-600">{successMessage}</p>
+                )}
+
+                {/* Botón */}
                 <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

@@ -48,6 +48,9 @@ const Footer = () => {
               <a href="#servicios" className="text-gray-400 hover:text-accent">
                 Servicios &#10230;
               </a>
+              <a href="#nosotros" className="text-gray-400 hover:text-accent">
+                Nosotros &#10230;
+              </a>
               <a href="#contacto" className="text-gray-400 hover:text-accent">
                 Contacto &#10230;
               </a>
