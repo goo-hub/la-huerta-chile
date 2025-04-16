@@ -13,7 +13,7 @@ const Nosotros = () => {
                     <h2 className="text-4xl lg:text-5xl 2xl:text-6xl font-Season font-light">Cultivamos soluciones<br /> para el campo</h2>
                     <div className='space-y-2'>
                         <p>
-                            <strong>La Huerta</strong> es una empresa familiar fundada en 2019 en El Manzano, Las Cabras, por un grupo de <strong>jóvenes comprometidos</strong> con el desarrollo agrícola.
+                            <strong>La Huerta</strong> es una empresa familiar fundada en 2019 en El Manzano, comuna de Las Cabras, por un grupo de <strong>jóvenes comprometidos</strong> con el desarrollo agrícola.
                         </p>
                         <p>
                             Nos dedicamos a la distribución de insumos para riego tecnificado y agrotextiles, ayudando a agricultores de zonas como San Pedro de Melipilla, Pichidegua y alrededores a enfrentar la escasez hídrica con soluciones eficientes y de calidad.

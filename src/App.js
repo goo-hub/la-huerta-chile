@@ -9,7 +9,7 @@ import Loader from "./components/Loader";
 import Goo from './components/Goo';
 import Nosotros from './components/Nosotros';
 
-import Mantenimiento from './components/Mantenimiento';
+//import Mantenimiento from './components/Mantenimiento';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,12 +17,12 @@ function App() {
   useEffect(() => {
     // Simulate an API call
     setTimeout(() => {
-      setIsLoading(true);
-    }, 0);
+      setIsLoading(false);
+    }, 3000);
   }, []);
 
   if (isLoading) {
-    return <Mantenimiento />
+    return <Loader />
   }
   return (
     <>

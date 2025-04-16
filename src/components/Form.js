@@ -82,7 +82,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white w-full px-5 md:px-8 pt-12 2xl:pt-20 pb-8 relative rounded-none lg:rounded-[40px] shadow-lg mx-auto"
+            className="bg-white w-full px-5 md:px-8 pt-12 2xl:pt-20 pb-24 lg:pb-8 relative rounded-none lg:rounded-[40px] shadow-lg mx-auto"
         >
             {/* Alert Notification */}
             <AnimatePresence>
