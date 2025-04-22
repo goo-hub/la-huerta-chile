@@ -19,7 +19,7 @@ const Nosotros = () => {
                             Nos dedicamos a la distribución de insumos para riego tecnificado y agrotextiles, ayudando a agricultores de zonas como San Pedro de Melipilla, Pichidegua y alrededores a enfrentar la escasez hídrica con soluciones eficientes y de calidad.
                         </p>
                     </div>
-                    <Link to={'https://web.whatsapp.com/send?phone=56934116351&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target="_blank" >
+                    <Link to={'https://wa.link/3uchfc'} target="_blank" >
                         <button
                             type="submit"
                             className="flex justify-center gap-4 items-center shadow-xl text-lg font-Inter text-black bg-primary backdrop-blur-md isolation-auto border-gray-50 

@@ -83,7 +83,7 @@ const Hero = () => {
 
                 {/* Columna derecha con botón alineado abajo */}
                 <div className="w-full lg:w-4/12 2xl:w-5/12 h-auto md:h-full pb-0 md:pb-48 flex flex-col justify-center md:justify-end items-center md:items-start ">
-                    <Link to={'https://web.whatsapp.com/send?phone=56934116351&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n'} target="_blank">
+                    <Link to={'https://wa.link/3uchfc'} target="_blank">
                         <button
                             type="submit"
                             className="hero-btn flex justify-center gap-4 items-center shadow-xl text-lg font-Inter font-semibold text-black bg-white backdrop-blur-md isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-primary hover:text-gray-900 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 pl-6 pr-2 py-2 overflow-hidden border-2 rounded-full group"

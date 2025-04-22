@@ -101,7 +101,7 @@ const ContactForm = () => {
 
             {/* WhatsApp Icon */}
             <a
-                href="https://web.whatsapp.com/send?phone=56966189492&text=Hola%20La%20Huerta%20Chile!%0D%0AJunto%20con%20saludar%2C%20solicito%20mayor%20informaci%C3%B3n"
+                href="https://wa.link/k2cwjg"
                 target="_blank"
                 rel="noopener noreferrer"
             >
